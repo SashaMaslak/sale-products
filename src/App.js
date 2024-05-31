@@ -1,9 +1,10 @@
+import Login from "./pages/Login/Login"
 import "./App.css"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">Sale Products</header>
+      <Login />
     </div>
   )
 }
