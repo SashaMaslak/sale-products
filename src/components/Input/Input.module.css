@@ -3,30 +3,46 @@
   margin-bottom: 24px;
 }
 
-.formGroup label {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  color: var(--dark-gray);
-  font-size: 16px;
-  pointer-events: none;
-  transition: all 0.2s ease;
-}
-
-.formGroup input {
+.input {
+  position: relative;
   width: 100%;
-  padding: 10px 15px;
-  border: 1px solid var(--light-gray);
+  padding: 8px 12px;
+  border: 1px solid var(--gray-40);
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 16px;
   color: var(--text-color);
-  background-color: var(--background-input);
+  background-color: var(--gray-10);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.formGroup input:focus {
+.input:focus {
   border-color: var(--accent-gold-hover);
-  box-shadow: var(--shadow-color);
+  box-shadow: var(--shadow);
   outline: none;
+}
+
+@media (min-width: 768px) {
+  .input {
+    padding: 9px 14px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .input {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
+.loginFormIcon {
+  position: absolute;
+  color: var(--gray-50);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.loginFormIcon:hover {
+  color: var(--gray-60);
 }

@@ -1,0 +1,31 @@
+.row {
+  color: var(--text-color);
+}
+
+.row:nth-child(even) {
+  background-color: var(--white-color);
+}
+
+.row:nth-child(odd) {
+  background-color: var(--gray-10);
+}
+
+.rowItem {
+  border: 1px solid var(--gray-40);
+  padding: 4px;
+  height: 36px;
+  border-radius: 4px;
+}
+
+.iconsGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.tableIcon {
+  color: var(--gray-70);
+}
+
+.tableIcon:hover {
+  color: var(--text-color);
+}

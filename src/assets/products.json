@@ -1,0 +1,352 @@
+[
+  {
+    "id": "0",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "1",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "2",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "3",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "4",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "5",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "6",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "7",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "8",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "9",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "10",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "11",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "12",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "13",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "14",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "15",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "16",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "17",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "18",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "19",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "20",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "21",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "22",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "23",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "24",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "25",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "26",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "27",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "28",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "29",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "30",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "31",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "32",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "33",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "34",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "35",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "36",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "37",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "38",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "39",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "40",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "41",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "42",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "43",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "44",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "45",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "46",
+    "category": "Clothes",
+    "name": "Nike M Nk Df Acd2",
+    "quantity": 22,
+    "price": 4.0
+  },
+  {
+    "id": "47",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  },
+  {
+    "id": "48",
+    "category": "PC",
+    "name": "Lenovo Y50-70",
+    "quantity": 5,
+    "price": 25.0
+  },
+  {
+    "id": "49",
+    "category": "Plumbing",
+    "name": "Cersanit Mito 17",
+    "quantity": 1337,
+    "price": 5.0
+  }
+]

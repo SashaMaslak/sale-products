@@ -1,0 +1,11 @@
+.logoBlock {
+  display: block;
+  cursor: pointer;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  height: auto;
+  max-width: 100%;
+}
