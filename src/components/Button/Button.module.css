@@ -1,15 +1,37 @@
 .button {
-  width: 100%;
-  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 4px 1px;
   border: none;
   border-radius: 5px;
-  background-color: var(--accent-gold-color);
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+@media (min-width: 480px) and (max-width: 1023px) {
+  .button {
+    font-size: 12px;
+    padding: 2px 1px;
+  }
+}
+
+.button {
+  background-color: var(--accent-gold-color);
+}
+
 .button:hover {
   background-color: var(--accent-gold-hover);
+}
+
+.buttonBorder {
+  border: 1px solid var(--gray-50);
+}
+
+.textBtn {
+  line-height: 32px;
 }

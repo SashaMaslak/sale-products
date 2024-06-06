@@ -1,0 +1,27 @@
+.rowHead {
+  background-color: var(--gray-30);
+}
+
+.rowHeadItem {
+  border: 1px solid var(--gray-50);
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.textRowHead {
+  cursor: pointer;
+  margin-right: 6px;
+  line-height: 0px;
+}
+
+@media (min-width: 768px) {
+  .rowHeadItem {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rowHeadItem {
+    font-size: 16px;
+  }
+}

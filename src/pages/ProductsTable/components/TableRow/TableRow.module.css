@@ -1,0 +1,81 @@
+.row {
+  color: var(--text-color);
+}
+
+.row:nth-child(even) {
+  background-color: var(--white-color);
+}
+
+.row:nth-child(odd) {
+  background-color: var(--gray-10);
+}
+
+.row:hover {
+  background-color: var(--accent-light-color);
+}
+
+.rowItem {
+  border: 1px solid var(--gray-40);
+  padding: 4px 6px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.iconsGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 560px) {
+  .iconsGroup {
+    gap: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .iconsGroup {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .iconsGroup {
+    gap: 20px;
+  }
+}
+
+.tableIcon {
+  color: var(--gray-70);
+  transition: font-size 0.3s;
+}
+
+@media (min-width: 768px) {
+  .tableIcon {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tableIcon {
+    font-size: 20px;
+  }
+}
+
+.tableIcon:hover {
+  color: var(--accent-orange-color);
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .tableIcon:hover {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tableIcon:hover {
+    font-size: 24px;
+  }
+}

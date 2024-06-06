@@ -1,0 +1,23 @@
+.productsTablePage {
+  min-height: 94vh;
+  height: 100%;
+  padding-top: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tableBlock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
