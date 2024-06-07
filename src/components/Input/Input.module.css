@@ -21,14 +21,28 @@
   outline: none;
 }
 
+@media (min-width: 768px) {
+  .input {
+    padding: 9px 14px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .input {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
 .loginFormIcon {
   position: absolute;
-  color: var(--gray-60);
+  color: var(--gray-50);
   top: 50%;
   transform: translateY(-50%);
   right: 10px;
 }
 
 .loginFormIcon:hover {
-  color: var(--accent-orange-color);
+  color: var(--gray-60);
 }

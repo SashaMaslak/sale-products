@@ -1,5 +1,6 @@
 .loginPage {
   min-height: 100vh;
+  height: 100%;
   padding-top: 1rem;
   padding-bottom: 3rem;
   display: flex;

@@ -3,11 +3,6 @@
   cursor: pointer;
   max-width: 100%;
   overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.logoBlock:hover {
-  transform: translateY(-3px);
 }
 
 .logo {
