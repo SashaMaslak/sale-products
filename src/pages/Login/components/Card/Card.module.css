@@ -1,8 +1,9 @@
 .loginForm {
   position: relative;
-  margin-top: 36px;
-  padding: 20px 32px;
-  height: fit-content;
+  max-width: 500px;
+  height: 630px;
+  margin-top: 100px;
+  padding: 36px;
   background-color: var(--white-color);
   border: 1px solid var(--gray-40);
   border-radius: 10px;
@@ -10,26 +11,40 @@
 }
 .logo {
   margin: 0 auto;
-  max-width: 300px;
-  width: 100%;
+  width: 20rem;
 }
 
 .titleForm {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 60px;
+  margin-bottom: 36px;
   text-align: center;
-  font-size: 28px;
+  font-size: 1.6rem;
+  color: var(--text-color);
 }
 
 .btnGroup {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .titleForm {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .titleForm {
+    font-size: 2rem;
+  }
 }
 
 .footerCard {
-  margin-top: 96px;
-  margin-bottom: 16px;
-  font-size: 14px;
+  width: 100%;
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
   color: var(--text-color);
 }
