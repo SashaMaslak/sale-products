@@ -1,28 +1,47 @@
 import React from "react"
 import { MdAddToPhotos } from "react-icons/md"
 import { MdApps } from "react-icons/md"
+import CartIcon from "components/Icons/CartIcon/CartIcon"
 import css from "./Button.module.css"
 
-const Button = props => {
-  const { buttonType, buttonTitle, style, minSize, iconName } = props
+const Button = ({
+  onClick,
+  buttonType,
+  buttonTitle,
+  styleAdd,
+  minWidth,
+  width,
+  iconName,
+  iconSize,
+}) => {
   let iconBtn = null
   switch (iconName) {
     case "preview":
-      iconBtn = <MdApps className={`icon`} />
+      iconBtn = <MdApps className={`icon`} size={iconSize} />
       break
     case "addProduct":
-      iconBtn = <MdAddToPhotos className={`icon`} />
+      iconBtn = <MdAddToPhotos className={`icon`} size={iconSize} />
       break
+    case "buyProduct":
+      iconBtn = <CartIcon type="add" size={iconSize} />
+      break
+    default:
+      iconBtn = null
   }
   return (
     <div className={css.buttonGroup}>
       <button
+        onClick={onClick}
         type={buttonType}
-        className={`${css.button} ${style === "border" && css.buttonBorder} `}
-        style={{ minWidth: minSize }}
+        className={`${css.button} ${
+          styleAdd === "border" && css.buttonBorder
+        } `}
+        style={{ width: width }}
       >
         {iconName && iconBtn}
-        <span className={css.textBtn}>{buttonTitle}</span>
+        <span style={{ lineHeight: `${iconSize}px` }} className={css.textBtn}>
+          {buttonTitle}
+        </span>
       </button>
     </div>
   )

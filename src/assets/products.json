@@ -4,349 +4,399 @@
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "1",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "2",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "3",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "4",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "5",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "6",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "7",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "8",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "9",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "10",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "11",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "12",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "13",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "14",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "15",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "16",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "17",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "18",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "19",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "20",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "21",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "22",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "23",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "24",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "25",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "26",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "27",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "28",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "29",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "30",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "31",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "32",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "33",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "34",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "35",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "36",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "37",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "38",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "39",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "40",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "41",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "42",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "43",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "44",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "45",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "46",
     "category": "Clothes",
     "name": "Nike M Nk Df Acd2",
     "quantity": 22,
-    "price": 4.0
+    "price": 4000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "47",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "48",
     "category": "PC",
     "name": "Lenovo Y50-70",
     "quantity": 5,
-    "price": 25.0
+    "price": 25000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   },
   {
     "id": "49",
     "category": "Plumbing",
     "name": "Cersanit Mito 17",
     "quantity": 1337,
-    "price": 5.0
+    "price": 5000,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Etautoloribus error eius asperiores repellendus obcaecati ut totam ipsum at labore, saepe, repudiandae, dignissimos dolor quas quos? Itaque, alias pariatur."
   }
 ]
