@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/sale-products/static/css/main.da9b1195.css",
+    "main.js": "/sale-products/static/js/main.0f63c390.js",
+    "static/media/Manrope.ttf": "/sale-products/static/media/Manrope.4afb283bba326df875f6.ttf",
+    "static/media/laptop.jpeg": "/sale-products/static/media/laptop.66c24030d3c32d52c088.jpeg",
+    "static/media/carts-col.svg": "/sale-products/static/media/carts-col.2b2928533e5e13f229cbc99fd3d635a4.svg",
+    "static/media/logo.png": "/sale-products/static/media/logo.a28da07e3d88516a5ea2.png",
+    "index.html": "/sale-products/index.html",
+    "main.da9b1195.css.map": "/sale-products/static/css/main.da9b1195.css.map",
+    "main.0f63c390.js.map": "/sale-products/static/js/main.0f63c390.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da9b1195.css",
+    "static/js/main.0f63c390.js"
+  ]
+}
