@@ -8,6 +8,7 @@
 :root {
   --background-color: #fcffda;
   --text-color: #212c3d;
+  --accent-light-color: #fff096;
   --accent-gold-color: #ffde59;
   --accent-gold-hover: #ffca42;
   --accent-orange-color: #f98033;
@@ -19,6 +20,7 @@
   --gray-50: #ccc;
   --gray-60: #999;
   --gray-70: #666;
+  --gray-80: #333;
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -110,17 +112,5 @@ button:focus {
 }
 
 .icon {
-  font-size: 1.2rem;
-}
-
-@media (min-width: 768px) {
-  .icon {
-    font-size: 1.3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .icon {
-    font-size: 1.4rem;
-  }
+  font-size: 16px;
 }
