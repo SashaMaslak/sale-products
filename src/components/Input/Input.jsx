@@ -9,9 +9,15 @@ const Input = ({
   inputPlaceholder,
   required,
   toggleVisiblePass,
+  value,
+  onChange,
+  onBlur,
 }) => (
   <div className={css.formGroup}>
     <input
+      value={value}
+      onChange={onChange}
+      onBlur={onBlur}
       className={css.input}
       type={inputType}
       id={inputName}

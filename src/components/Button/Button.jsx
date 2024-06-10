@@ -9,7 +9,6 @@ const Button = ({
   buttonType,
   buttonTitle,
   styleAdd,
-  minWidth,
   width,
   iconName,
   iconSize,
