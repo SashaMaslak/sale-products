@@ -92,31 +92,39 @@ const Card = () => {
       </div>
 
       <h2 className={css.titleForm}>Login Form</h2>
-      <Input
-        value={user.name}
-        onChange={e => handleChange(e, "name")}
-        onBlur={() => handleBlur("name")}
-        inputName="name"
-        inputType="text"
-        inputPlaceholder="User name"
-        required={true}
-      />
-      {errorsInputs.name && (
-        <p className={css.errorInput}>{errorsInputs.name}</p>
-      )}
-      <Input
-        value={user.password}
-        onChange={e => handleChange(e, "password")}
-        onBlur={() => handleBlur("password")}
-        inputName="password"
-        inputType={isPasswordHidden ? "password" : "text"}
-        inputPlaceholder="Password"
-        required={true}
-        toggleVisiblePass={toggleVisiblePass}
-      />
-      {errorsInputs.password && (
-        <p className={css.errorInput}>{errorsInputs.password}</p>
-      )}
+      <div className={css.inputsGroup}>
+        <Input
+          value={user.name}
+          isEmpty={errorsInputs.name}
+          onChange={e => handleChange(e, "name")}
+          onBlur={() => handleBlur("name")}
+          inputName="name"
+          inputType="text"
+          inputPlaceholder="User name"
+          required={true}
+        />
+        {errorsInputs.name && (
+          <p className={`${css.errorInput} ${css.errorInputName}`}>
+            *{errorsInputs.name}
+          </p>
+        )}
+        <Input
+          value={user.password}
+          isEmpty={errorsInputs.password}
+          onChange={e => handleChange(e, "password")}
+          onBlur={() => handleBlur("password")}
+          inputName="password"
+          inputType={isPasswordHidden ? "password" : "text"}
+          inputPlaceholder="Password"
+          required={true}
+          toggleVisiblePass={toggleVisiblePass}
+        />
+        {errorsInputs.password && (
+          <p className={`${css.errorInput} ${css.errorInputPass}`}>
+            *{errorsInputs.password}
+          </p>
+        )}
+      </div>
       <div className={css.btnGroup}>
         <Button
           onClick={e => handleSubmit(e, "SignIn")}

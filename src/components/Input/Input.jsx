@@ -10,6 +10,7 @@ const Input = ({
   required,
   toggleVisiblePass,
   value,
+  isEmpty,
   onChange,
   onBlur,
 }) => (
@@ -18,7 +19,7 @@ const Input = ({
       value={value}
       onChange={onChange}
       onBlur={onBlur}
-      className={css.input}
+      className={`${css.input} ${isEmpty && css.inputEmpty}`}
       type={inputType}
       id={inputName}
       name={inputName}
