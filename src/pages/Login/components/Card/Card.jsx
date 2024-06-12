@@ -1,14 +1,19 @@
 import React, { useState } from "react"
-import axios from "axios"
+import { ToastContainer, toast } from "react-toastify"
+import { Hourglass } from "react-loader-spinner"
 import Input from "components/Input/Input"
 import Button from "components/Button/Button"
 import Logo from "components/Logo/Logo"
+import { fetchApiUser, setToken } from "services/api/usersApi"
 import css from "./Card.module.css"
+import "react-toastify/dist/ReactToastify.css"
+
 const Card = () => {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true)
   const [user, setUser] = useState({ name: "", password: "" })
+  const [isLoading, setIsLoading] = useState(false)
   const [errorsInputs, setErrorsInputs] = useState({ name: "", password: "" })
-  const [token, setToken] = useState("")
+  const [messageDB, setMessageDB] = useState({ info: "", error: "" })
 
   const toggleVisiblePass = () => setIsPasswordHidden(prev => !prev)
 
@@ -16,11 +21,11 @@ const Card = () => {
     let hasErrorInput = false
     const newErrorsInput = { name: "", password: "" }
 
-    if (user.name === "") {
+    if (user.name.trim() === "") {
       newErrorsInput.name = "Name is required"
       hasErrorInput = true
     }
-    if (user.password === "") {
+    if (user.password.trim() === "") {
       newErrorsInput.password = "Password is required"
       hasErrorInput = true
     }
@@ -30,6 +35,7 @@ const Card = () => {
   }
 
   const handleChange = (e, inputName) => {
+    setMessageDB({ info: "", error: "" })
     const value = e.target.value
     setUser({ ...user, [inputName]: value })
     if (value !== "") {
@@ -41,7 +47,7 @@ const Card = () => {
   }
 
   const handleBlur = inputName => {
-    if (user[inputName] === "") {
+    if (user[inputName].trim() === "") {
       setErrorsInputs(prevErrors => ({
         ...prevErrors,
         [inputName]: `${
@@ -58,7 +64,7 @@ const Card = () => {
 
   const resetUser = () => setUser({ name: "", password: "" })
 
-  const handleSubmit = async (e, btnName) => {
+  const handleSubmit = async (e, action) => {
     e.preventDefault()
 
     const isError = checkError()
@@ -66,23 +72,21 @@ const Card = () => {
     if (isError) {
       return
     }
-
-    resetUser()
-    if (btnName === "SignIn") {
-      try {
-        const result = await axios.post(
-          "http://localhost:3001/auth/login",
-          user
-        )
-        setToken(result.data.token)
-        localStorage.setItem("authToken", token)
-      } catch (error) {
-        console.error("Error logging in:", error)
+    setIsLoading(true)
+    try {
+      const result = await fetchApiUser(action, user)
+      if (action === "login") {
+        setToken()
+        localStorage.setItem("authToken", result.data.token)
       }
+      setMessageDB(prev => ({ ...prev, info: result.data.message }))
+      toast.success(result.data.message)
+      resetUser()
+    } catch (error) {
+      toast.error(`${error.response.data.message}`)
+      setMessageDB(prev => ({ ...prev, error: error.response.data.message }))
     }
-    if (btnName === "SignUp") {
-      console.log(`Submit signUp: ${user.name} ${user.password}`)
-    }
+    setIsLoading(false)
   }
 
   return (
@@ -124,15 +128,24 @@ const Card = () => {
             *{errorsInputs.password}
           </p>
         )}
+        {messageDB.error && (
+          <p className={`${css.errorDB}`}>{messageDB.error}</p>
+        )}
+        {messageDB.info && (
+          <p className={`${css.infoDB}`}>
+            <p>{messageDB.info}</p>
+          </p>
+        )}
       </div>
+
       <div className={css.btnGroup}>
         <Button
-          onClick={e => handleSubmit(e, "SignIn")}
+          onClick={e => handleSubmit(e, "login")}
           buttonType="submit"
           buttonTitle="Sign IN"
         />
         <Button
-          onClick={e => handleSubmit(e, "SignUp")}
+          onClick={e => handleSubmit(e, "register")}
           buttonType="submit"
           buttonTitle="Sign UP"
         />
@@ -140,6 +153,20 @@ const Card = () => {
       <div className={css.footerCard}>
         <p>Having a problem? Contact our support team: support@example.com</p>
       </div>
+      <ToastContainer />
+      {isLoading && (
+        <div className={css.spinnerOverlay}>
+          <Hourglass
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="hourglass-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            colors={["#ffca42", "#fff096"]}
+          />
+        </div>
+      )}
     </div>
   )
 }
