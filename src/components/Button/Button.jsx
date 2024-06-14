@@ -5,11 +5,12 @@ import CartIcon from "components/Icons/CartIcon/CartIcon"
 import css from "./Button.module.css"
 
 const Button = ({
+  name,
+  value,
   onClick,
   buttonType,
   buttonTitle,
   styleAdd,
-  minWidth,
   width,
   iconName,
   iconSize,
@@ -31,6 +32,8 @@ const Button = ({
   return (
     <div className={css.buttonGroup}>
       <button
+        name={name}
+        value={value}
         onClick={onClick}
         type={buttonType}
         className={`${css.button} ${

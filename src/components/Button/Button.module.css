@@ -1,4 +1,5 @@
 .button {
+  width: 120px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -20,6 +21,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .button {
+    width: 150px;
+  }
+}
+
 .button {
   background-color: var(--accent-gold-color);
 }
@@ -33,5 +40,11 @@
 }
 
 .textBtn {
-  line-height: 32px;
+  line-height: 26px;
+}
+
+@media (min-width: 1024px) {
+  .textBtn {
+    line-height: 32px;
+  }
 }
