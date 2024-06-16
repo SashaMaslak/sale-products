@@ -1,17 +1,13 @@
-import axios from "axios"
-
-export const apiUsers = axios.create({
-  baseURL: "https://sale-products-server.onrender.com/auth/",
-})
+import { usersApi } from "constants/api"
 
 export const fetchApiUser = async (endpoint, user) => {
-  return await apiUsers.post(`${endpoint}`, user)
+  return await usersApi.post(`${endpoint}`, user)
 }
 
 export const setToken = token => {
-  apiUsers.defaults.headers.common["Authorization"] = `Bearer ${token}`
+  usersApi.defaults.headers.common["Authorization"] = `Bearer ${token}`
 }
 
 export const deleteToken = () => {
-  apiUsers.defaults.headers.common["Authorization"] = ""
+  usersApi.defaults.headers.common["Authorization"] = ""
 }
