@@ -3,14 +3,14 @@ import cloneDeep from "lodash/cloneDeep"
 import throttle from "lodash/throttle"
 import ReactPaginate from "react-paginate"
 import Pagination from "rc-pagination"
-import "rc-pagination/assets/index.css"
 import Container from "components/Container/Container"
 import Button from "components/Button/Button"
 import Table from "./components/Table/Table"
-import css from "./ProductsTable.module.css"
 import Footer from "components/Footer/Footer"
 import Header from "components/Header/Header"
 import { fetchApiProducts } from "services/api/productsApi"
+import css from "./ProductsTable.module.css"
+import "./rc-pagination.css"
 
 const ProductsTable = () => {
   const [products, setProducts] = useState([])
@@ -25,7 +25,7 @@ const ProductsTable = () => {
       )
 
       setProducts(response.data.products)
-      setPageCount(response.data.pages)
+      setPageCount(response.data.pages * limit)
     } catch (error) {
       console.log("error:", error)
     }
@@ -34,8 +34,6 @@ const ProductsTable = () => {
   useEffect(() => {
     fetchProducts()
   }, [limit, currentPage])
-
-  console.log("pageCount:", pageCount)
 
   const handleClickBtnNav = (e, btnName) => {
     e.stopPropagation()
@@ -52,8 +50,12 @@ const ProductsTable = () => {
   }
 
   const handlePageClick = selectedPage => {
-    setCurrentPage(selectedPage + 1)
+    setCurrentPage(selectedPage)
   }
+
+  console.log("limit:", limit)
+  console.log("currentPage:", currentPage)
+  console.log("pageCount:", pageCount)
 
   return (
     <Container>
@@ -86,6 +88,7 @@ const ProductsTable = () => {
         </main>
         <div className={css.paginationBlock}>
           <Pagination
+            className={css.pagination}
             pageSize={limit}
             onChange={handlePageClick}
             current={currentPage}
