@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react"
-import cloneDeep from "lodash/cloneDeep"
-import throttle from "lodash/throttle"
-import ReactPaginate from "react-paginate"
 import Pagination from "rc-pagination"
 import Container from "components/Container/Container"
 import Button from "components/Button/Button"
@@ -16,7 +13,7 @@ const ProductsTable = () => {
   const [products, setProducts] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [limit, setLimit] = useState(5)
-  const [pageCount, setPageCount] = useState(0)
+  const [totalResult, setTotalResult] = useState(0)
 
   const fetchProducts = async () => {
     try {
@@ -25,7 +22,7 @@ const ProductsTable = () => {
       )
 
       setProducts(response.data.products)
-      setPageCount(response.data.pages * limit)
+      setTotalResult(response.data.totalResult)
     } catch (error) {
       console.log("error:", error)
     }
@@ -52,10 +49,6 @@ const ProductsTable = () => {
   const handlePageClick = selectedPage => {
     setCurrentPage(selectedPage)
   }
-
-  console.log("limit:", limit)
-  console.log("currentPage:", currentPage)
-  console.log("pageCount:", pageCount)
 
   return (
     <Container>
@@ -92,7 +85,7 @@ const ProductsTable = () => {
             pageSize={limit}
             onChange={handlePageClick}
             current={currentPage}
-            total={pageCount}
+            total={totalResult}
           />
         </div>
       </div>
