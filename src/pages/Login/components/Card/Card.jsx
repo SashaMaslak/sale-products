@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
-import { Hourglass } from "react-loader-spinner"
 import Input from "components/Input/Input"
 import Button from "components/Button/Button"
 import Logo from "components/Logo/Logo"
+import { Loader } from "components/Loader/Loader"
 import { fetchApiUser, setToken } from "services/api/usersApi"
 import css from "./Card.module.css"
 import "react-toastify/dist/ReactToastify.css"
@@ -154,19 +154,7 @@ const Card = () => {
         <p>Having a problem? Contact our support team: support@example.com</p>
       </div>
       <ToastContainer />
-      {isLoading && (
-        <div className={css.spinnerOverlay}>
-          <Hourglass
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="hourglass-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            colors={["#ffca42", "#fff096"]}
-          />
-        </div>
-      )}
+      {isLoading && <Loader />}
     </div>
   )
 }

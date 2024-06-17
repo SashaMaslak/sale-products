@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react"
-import Pagination from "rc-pagination"
+import { Pagination } from "components/Pagination/Pagination"
 import Container from "components/Container/Container"
 import Button from "components/Button/Button"
+import { Loader } from "components/Loader/Loader"
 import Table from "./components/Table/Table"
 import Footer from "components/Footer/Footer"
 import Header from "components/Header/Header"
 import { fetchApiProducts } from "services/api/productsApi"
 import css from "./ProductsTable.module.css"
-import "./rc-pagination.css"
 
 const ProductsTable = () => {
   const [products, setProducts] = useState([])
@@ -79,15 +79,12 @@ const ProductsTable = () => {
         <main className={css.tableBlock}>
           <Table products={products} />
         </main>
-        <div className={css.paginationBlock}>
-          <Pagination
-            className={css.pagination}
-            pageSize={limit}
-            onChange={handlePageClick}
-            current={currentPage}
-            total={totalResult}
-          />
-        </div>
+        <Pagination
+          limit={limit}
+          handlePageClick={handlePageClick}
+          currentPage={currentPage}
+          totalResult={totalResult}
+        />
       </div>
       <Footer />
     </Container>
