@@ -2,6 +2,7 @@
 .paginationBlock {
   display: flex;
   justify-content: center;
+  margin-bottom: 8px;
 }
 
 .rc-pagination {

@@ -11,11 +11,13 @@ import css from "./ProductsTable.module.css"
 
 const ProductsTable = () => {
   const [products, setProducts] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  const [limit, setLimit] = useState(5)
+  const [limit, setLimit] = useState(36)
   const [totalResult, setTotalResult] = useState(0)
 
   const fetchProducts = async () => {
+    setIsLoading(true)
     try {
       const response = await fetchApiProducts(
         `?limit=${limit}&page=${currentPage}`
@@ -26,6 +28,7 @@ const ProductsTable = () => {
     } catch (error) {
       console.log("error:", error)
     }
+    setIsLoading(false)
   }
 
   useEffect(() => {
@@ -87,6 +90,7 @@ const ProductsTable = () => {
         />
       </div>
       <Footer />
+      {isLoading && <Loader />}
     </Container>
   )
 }
