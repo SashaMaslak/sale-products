@@ -1,10 +1,9 @@
 import React from "react"
-import products from "assets/products.json"
 import css from "./Table.module.css"
 import TableRow from "../TableRow/TableRow"
 import TableHead from "../TableHead/TableHead"
 
-const Table = () => (
+const Table = ({ products }) => (
   <table className={css.table}>
     <TableHead />
     <tbody>

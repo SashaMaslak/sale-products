@@ -4,6 +4,7 @@ import Header from "components/Header/Header"
 import ProductCard from "./ProductCard/ProductCard"
 import Footer from "components/Footer/Footer"
 import products from "assets/products.json"
+import { fetchApiProducts } from "services/api/productsApi"
 import css from "./ProductsPreview.module.css"
 
 const ProductsPreview = () => {
