@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
   return (
     <div onClick={e => handleCardClick(e)} className={css.productCard}>
       <div className={css.productImg}>
-        <img src={imgLaptop} alt="Product 2" />
+        <img src={product?.image} alt="Product" />
       </div>
 
       <div className={css.productInfo}>
@@ -37,6 +37,7 @@ const ProductCard = ({ product }) => {
           buttonType="button"
           buttonTitle="Buy product"
           iconName="buyProduct"
+          iconSize="24px"
         />
       </div>
     </div>

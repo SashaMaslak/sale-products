@@ -4,12 +4,6 @@
   padding-top: 1rem;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-}
-
 .title {
   color: var(--text-color);
   font-size: 2rem;

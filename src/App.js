@@ -1,12 +1,11 @@
-import Login from "pages/Login/Login"
 import "./App.css"
-import ProductsTable from "pages/ProductsTable/ProductsTable"
+
+import ProductsPreview from "pages/ProductsPreview/ProductsPreview"
 
 function App() {
   return (
     <div className="App">
-      <ProductsTable />
-      {/* <Login /> */}
+      <ProductsPreview />
     </div>
   )
 }

@@ -8,12 +8,13 @@ import Footer from "components/Footer/Footer"
 import Header from "components/Header/Header"
 import { fetchApiProducts } from "services/api/productsApi"
 import css from "./ProductsTable.module.css"
+import { Nav } from "components/Nav/Nav"
 
 const ProductsTable = () => {
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  const [limit, setLimit] = useState(36)
+  const [limit, setLimit] = useState(12)
   const [totalResult, setTotalResult] = useState(0)
 
   const fetchProducts = async () => {
@@ -27,19 +28,27 @@ const ProductsTable = () => {
       setTotalResult(response.data.totalResult)
     } catch (error) {
       console.log("error:", error)
+    } finally {
+      setIsLoading(false)
     }
-    setIsLoading(false)
   }
 
   useEffect(() => {
-    fetchProducts()
+    fetchProducts(limit, currentPage, setProducts, setTotalResult)
   }, [limit, currentPage])
+
+  const handlePageClick = selectedPage => {
+    setCurrentPage(selectedPage)
+  }
 
   const handleClickBtnNav = (e, btnName) => {
     e.stopPropagation()
     switch (btnName) {
       case "preview":
         console.log("pressPreview")
+        break
+      case "table":
+        console.log("table")
         break
       case "addProduct":
         console.log("PressaddProduct")
@@ -49,35 +58,11 @@ const ProductsTable = () => {
     }
   }
 
-  const handlePageClick = selectedPage => {
-    setCurrentPage(selectedPage)
-  }
-
   return (
     <Container>
       <div className={css.productsTablePage}>
         <Header />
-
-        <nav className={css.nav}>
-          <Button
-            onClick={e => handleClickBtnNav(e, "preview")}
-            buttonType="button"
-            buttonTitle="Preview"
-            styleAdd="border"
-            width="160px"
-            iconName="preview"
-            iconSize="32px"
-          />
-          <Button
-            onClick={e => handleClickBtnNav(e, "addProduct")}
-            buttonType="button"
-            buttonTitle="Add product"
-            styleAdd="border"
-            width="160px"
-            iconName="addProduct"
-            iconSize="32px"
-          />
-        </nav>
+        <Nav handleClickBtnNav={handleClickBtnNav} />
         <h2 className={css.title}>Products</h2>
         <main className={css.tableBlock}>
           <Table products={products} />

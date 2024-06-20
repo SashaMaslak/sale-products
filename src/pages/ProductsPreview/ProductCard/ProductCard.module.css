@@ -17,7 +17,7 @@
 .productImg {
   display: flex;
   justify-content: center;
-  padding: 0px 32px;
+  padding: 24px 32px 12px 32px;
 }
 
 .productInfo {
@@ -36,11 +36,13 @@
 .productInfoTitle {
   color: var(--text-color);
   margin: 0px 0px 10px 0px;
+  min-height: 38px;
 }
 
 @media (min-width: 480px) and (max-width: 1023px) {
   .productInfoTitle {
     font-size: 14px;
+    height: 3px;
   }
 }
 
@@ -50,14 +52,14 @@
   margin: 0.5rem 0rem 1.5rem 0rem;
   color: var(--gray-70);
   overflow: hidden;
-  max-height: 70px;
+  height: 70px;
   text-overflow: ellipsis;
 }
 
 @media (min-width: 480px) and (max-width: 1023px) {
   .productInfoDescr {
     font-size: 10px;
-    max-height: 48px;
+    height: 48px;
   }
 }
 
