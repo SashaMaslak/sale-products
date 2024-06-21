@@ -1,7 +1,7 @@
 import React from "react"
 import css from "./Table.module.css"
-import TableRow from "../TableRow/TableRow"
-import TableHead from "../TableHead/TableHead"
+import TableRow from "./TableRow"
+import TableHead from "./TableHead"
 
 const Table = ({ products }) => (
   <table className={css.table}>

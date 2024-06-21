@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Pagination } from "components/Pagination/Pagination"
 import Container from "components/Container/Container"
-import Button from "components/Button/Button"
 import { Loader } from "components/Loader/Loader"
-import Table from "./components/Table/Table"
+import Table from "../../components/Table/Table"
 import Footer from "components/Footer/Footer"
 import Header from "components/Header/Header"
 import { fetchApiProducts } from "services/api/productsApi"
@@ -41,28 +40,11 @@ const ProductsTable = () => {
     setCurrentPage(selectedPage)
   }
 
-  const handleClickBtnNav = (e, btnName) => {
-    e.stopPropagation()
-    switch (btnName) {
-      case "preview":
-        console.log("pressPreview")
-        break
-      case "table":
-        console.log("table")
-        break
-      case "addProduct":
-        console.log("PressaddProduct")
-        break
-      default:
-        break
-    }
-  }
-
   return (
     <Container>
       <div className={css.productsTablePage}>
         <Header />
-        <Nav handleClickBtnNav={handleClickBtnNav} />
+        <Nav />
         <h2 className={css.title}>Products</h2>
         <main className={css.tableBlock}>
           <Table products={products} />

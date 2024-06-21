@@ -39,6 +39,14 @@
   border: 1px solid var(--gray-50);
 }
 
+.buttonLight {
+  background-color: var(--gray-40);
+}
+
+.buttonLight:hover {
+  background-color: var(--gray-50);
+}
+
 .textBtn {
   line-height: 26px;
 }

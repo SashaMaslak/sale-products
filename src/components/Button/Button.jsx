@@ -42,7 +42,7 @@ const Button = ({
         type={buttonType}
         className={`${css.button} ${
           styleAdd === "border" && css.buttonBorder
-        } `}
+        } ${styleAdd === "light" && css.buttonLight}`}
         style={{ width: width }}
       >
         {iconName && iconBtn}
