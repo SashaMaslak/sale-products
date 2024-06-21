@@ -23,8 +23,6 @@ export const Nav = () => {
     }
   }
 
-  const handleCloseModalAddProduct = () => setIsOpenModalAddProduct(false)
-
   return (
     <nav className={css.nav}>
       <div className={css.leftBtns}>
@@ -58,9 +56,10 @@ export const Nav = () => {
       />
       {isOpenModalAddProduct && (
         <ModalProduct
-          handleCloseModal={handleCloseModalAddProduct}
+          handleCloseModal={setIsOpenModalAddProduct}
           isOpenModal={isOpenModalAddProduct}
           titleModal="Add Product:"
+          titleSubmitBtn="Create new product"
         />
       )}
     </nav>

@@ -6,7 +6,12 @@ import css from "./ModalProduct.module.css"
 import Input from "components/Input/Input"
 import { TextArea } from "components/TextArea/TextArea"
 
-export const ModalProduct = ({ handleCloseModal, isOpenModal, titleModal }) => {
+export const ModalProduct = ({
+  handleCloseModal,
+  isOpenModal,
+  titleModal,
+  titleSubmitBtn,
+}) => {
   useEffect(() => {
     const handleKeyPress = event => {
       if (event.key === "Escape") {
@@ -28,9 +33,15 @@ export const ModalProduct = ({ handleCloseModal, isOpenModal, titleModal }) => {
   }
   return (
     <div className={css.modalWrapper}>
-      <div className={css.modalBackdrop} onClick={handleCloseModal}></div>
+      <div
+        className={css.modalBackdrop}
+        onClick={() => handleCloseModal(false)}
+      ></div>
       <div className={css.modal}>
-        <span className={css.closeButton} onClick={handleCloseModal}>
+        <span
+          className={css.closeButton}
+          onClick={() => handleCloseModal(false)}
+        >
           <AiOutlineCloseCircle className={css.iconCloseForm} size={32} />
         </span>
         <h3>{titleModal}</h3>
@@ -72,15 +83,15 @@ export const ModalProduct = ({ handleCloseModal, isOpenModal, titleModal }) => {
           />
           <div className={css.btnGroup}>
             <Button
-              onClick={handleCloseModal}
+              onClick={() => handleCloseModal(false)}
               buttonType="submit"
               buttonTitle="Cancel"
               styleAdd="light"
             />
             <Button
-              onClick={handleCloseModal}
+              onClick={() => handleCloseModal(false)}
               buttonType="submit"
-              buttonTitle="Create"
+              buttonTitle={titleSubmitBtn}
             />
           </div>
         </form>
