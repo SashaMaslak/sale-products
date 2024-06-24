@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 import Button from "components/Button/Button"
-import "bootstrap/dist/css/bootstrap.min.css"
 import css from "./ModalProduct.module.css"
 import Input from "components/Input/Input"
 import { TextArea } from "components/TextArea/TextArea"
@@ -31,6 +30,7 @@ export const ModalProduct = ({
   if (!isOpenModal) {
     return null
   }
+
   return (
     <div className={css.modalWrapper}>
       <div

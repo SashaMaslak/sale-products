@@ -2,11 +2,14 @@ import React, { useState } from "react"
 import css from "./Table.module.css"
 import TableRow from "./TableRow"
 import TableHead from "./TableHead"
-import { ModalProduct } from "components/Modals/ModalProduct"
+import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
+import { ModalConfirm } from "components/Modals/ModalConfirm/ModalConfirm"
 
 const Table = ({ products }) => {
   const [isOpenModalEditProduct, setIsOpenModalEditProduct] = useState(false)
   const [isOpenModalCopyProduct, setIsOpenModalCopyProduct] = useState(false)
+  const [isOpenModalDeleteProduct, setIsOpenModalDeleteProduct] =
+    useState(false)
 
   const handleDoubleClickRow = e => {
     if (e.target.classList.contains(css.rowItem)) {
@@ -26,7 +29,7 @@ const Table = ({ products }) => {
         setIsOpenModalCopyProduct(true)
         break
       case "remove":
-        console.log("PressRemove")
+        setIsOpenModalDeleteProduct(true)
         break
       default:
         break
@@ -54,7 +57,7 @@ const Table = ({ products }) => {
           handleCloseModal={setIsOpenModalEditProduct}
           isOpenModal={isOpenModalEditProduct}
           titleModal="Edit Product:"
-          titleSubmitBtn="Change Product"
+          titleSubmitBtn="Changes"
         />
       )}
 
@@ -63,7 +66,18 @@ const Table = ({ products }) => {
           handleCloseModal={setIsOpenModalCopyProduct}
           isOpenModal={isOpenModalCopyProduct}
           titleModal="Copy Product:"
-          titleSubmitBtn="Create NEW product"
+          titleSubmitBtn="Create NEW"
+        />
+      )}
+
+      {isOpenModalDeleteProduct && (
+        <ModalConfirm
+          handleCloseModal={setIsOpenModalDeleteProduct}
+          isOpenModal={isOpenModalDeleteProduct}
+          titleModal="Confirm deletion of the product"
+          textModal="
+The product will be deleted forever and cannot be restored.:"
+          titleSubmitBtn="Confirm"
         />
       )}
     </>

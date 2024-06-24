@@ -13,6 +13,11 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.textarea::placeholder {
+  font-family: "Manrope";
+  color: red;
+}
+
 .textarea:focus {
   border-color: var(--accent-gold-hover);
   box-shadow: var(--shadow);

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Button from "components/Button/Button"
 import css from "./Nav.module.css"
-import { ModalProduct } from "components/Modals/ModalProduct"
+import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
 
 export const Nav = () => {
   const [isOpenModalAddProduct, setIsOpenModalAddProduct] = useState(false)
@@ -59,7 +59,7 @@ export const Nav = () => {
           handleCloseModal={setIsOpenModalAddProduct}
           isOpenModal={isOpenModalAddProduct}
           titleModal="Add Product:"
-          titleSubmitBtn="Create new product"
+          titleSubmitBtn="Create"
         />
       )}
     </nav>
