@@ -1,21 +1,23 @@
 import React, { useState } from "react"
+import { useLocation, useNavigate } from "react-router-dom"
 import Button from "components/Button/Button"
 import css from "./Nav.module.css"
 import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
-import { Navigate } from "react-router-dom"
 
-export const Nav = () => {
+const Nav = () => {
   const [isOpenModalAddProduct, setIsOpenModalAddProduct] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const handleClickBtnNav = (e, btnName) => {
     e.stopPropagation()
     switch (btnName) {
       case "preview":
-        console.log("press preview")
-        return <Navigate to="preview" replace={true} />
-      case "table":
-        console.log("press table")
-        return <Navigate to="products" replace={true} />
+        navigate("/preview")
+        break
+      case "products":
+        navigate("/products")
+        break
       case "addProduct":
         setIsOpenModalAddProduct(true)
         break
@@ -28,22 +30,24 @@ export const Nav = () => {
     <nav className={css.nav}>
       <div className={css.leftBtns}>
         <Button
-          onClick={() => <Navigate to="preview" replace={true} />}
+          onClick={e => handleClickBtnNav(e, "preview")}
           buttonType="button"
           buttonTitle="Preview"
           styleAdd="border"
           width="160px"
           iconName="preview"
           iconSize="32px"
+          isActive={location.pathname === "/preview"}
         />
         <Button
-          onClick={e => handleClickBtnNav(e, "table")}
+          onClick={e => handleClickBtnNav(e, "products")}
           buttonType="button"
           buttonTitle="Table"
           styleAdd="border"
           width="160px"
           iconName="table"
           iconSize="32px"
+          isActive={location.pathname === "/products"}
         />
       </div>
       <Button
@@ -57,7 +61,7 @@ export const Nav = () => {
       />
       {isOpenModalAddProduct && (
         <ModalProduct
-          handleCloseModal={setIsOpenModalAddProduct}
+          handleCloseModal={() => setIsOpenModalAddProduct(false)}
           isOpenModal={isOpenModalAddProduct}
           titleModal="Add Product:"
           titleSubmitBtn="Create"
@@ -66,3 +70,5 @@ export const Nav = () => {
     </nav>
   )
 }
+
+export default Nav

@@ -15,6 +15,7 @@ const Button = ({
   width,
   iconName,
   iconSize,
+  isActive,
 }) => {
   let iconBtn = null
   switch (iconName) {
@@ -42,7 +43,9 @@ const Button = ({
         type={buttonType}
         className={`${css.button} ${
           styleAdd === "border" && css.buttonBorder
-        } ${styleAdd === "light" && css.buttonLight}`}
+        } ${styleAdd === "light" && css.buttonLight} ${
+          isActive && css.buttonActive
+        }`}
         style={{ width: width }}
       >
         {iconName && iconBtn}

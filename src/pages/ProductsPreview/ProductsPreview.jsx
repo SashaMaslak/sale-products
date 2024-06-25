@@ -52,7 +52,6 @@ const ProductsPreview = () => {
         currentPage={currentPage}
         totalResult={totalResult}
       />
-      <Footer />
       {isLoading && <Loader />}
     </Container>
   )

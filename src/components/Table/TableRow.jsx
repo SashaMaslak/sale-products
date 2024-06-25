@@ -11,7 +11,10 @@ const TableRow = ({ product, handleClickIcon, handleDoubleClickRow }) => {
   })
 
   return (
-    <tr onDoubleClick={e => handleDoubleClickRow(e)} className={css.row}>
+    <tr
+      onDoubleClick={e => handleDoubleClickRow(e, product)}
+      className={css.row}
+    >
       <td className={css.rowItem}>{product?.id}</td>
       <td className={css.rowItem}>{product?.category}</td>
       <td className={css.rowItem}>{product?.name}</td>

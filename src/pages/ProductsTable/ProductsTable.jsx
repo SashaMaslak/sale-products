@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import { Pagination } from "components/Pagination/Pagination"
 import Container from "components/Container/Container"
 import { Loader } from "components/Loader/Loader"
 import Table from "../../components/Table/Table"
-import Footer from "components/Footer/Footer"
-import Header from "components/Header/Header"
 import { fetchApiProducts } from "services/api/productsApi"
 import css from "./ProductsTable.module.css"
-import { Nav } from "components/Nav/Nav"
 
 const ProductsTable = () => {
   const [products, setProducts] = useState([])
@@ -16,7 +13,8 @@ const ProductsTable = () => {
   const [limit, setLimit] = useState(12)
   const [totalResult, setTotalResult] = useState(0)
 
-  const fetchProducts = async () => {
+  console.log(setLimit)
+  const fetchProducts = useCallback(async () => {
     setIsLoading(true)
     try {
       const response = await fetchApiProducts(
@@ -30,11 +28,11 @@ const ProductsTable = () => {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [limit, currentPage])
 
   useEffect(() => {
-    fetchProducts(limit, currentPage, setProducts, setTotalResult)
-  }, [limit, currentPage])
+    fetchProducts()
+  }, [fetchProducts])
 
   const handlePageClick = selectedPage => {
     setCurrentPage(selectedPage)
@@ -54,7 +52,6 @@ const ProductsTable = () => {
           totalResult={totalResult}
         />
       </div>
-      <Footer />
       {isLoading && <Loader />}
     </Container>
   )

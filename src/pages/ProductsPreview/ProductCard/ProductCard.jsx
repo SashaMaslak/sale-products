@@ -1,12 +1,14 @@
 import React from "react"
-import imgLaptop from "assets/images/laptop.jpeg"
 import Button from "components/Button/Button"
 import css from "./ProductCard.module.css"
+import { useNavigate } from "react-router-dom"
 
 const ProductCard = ({ product }) => {
+  const navigate = useNavigate()
+
   const handleCardClick = e => {
     if (!e.target.closest(".productBuyBtn")) {
-      console.log("Click on card")
+      navigate("/product-info", { state: { product } })
     }
   }
 

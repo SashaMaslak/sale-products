@@ -28,11 +28,15 @@
 }
 
 .button {
-  background-color: var(--accent-gold-color);
+  background-color: var(--accent-light-color);
 }
 
 .button:hover {
   background-color: var(--accent-gold-hover);
+}
+
+.buttonActive {
+  background-color: var(--accent-gold-color);
 }
 
 .buttonBorder {

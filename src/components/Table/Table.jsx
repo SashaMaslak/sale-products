@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 import css from "./Table.module.css"
 import TableRow from "./TableRow"
 import TableHead from "./TableHead"
@@ -6,16 +8,16 @@ import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
 import { ModalConfirm } from "components/Modals/ModalConfirm/ModalConfirm"
 
 const Table = ({ products }) => {
+  const navigate = useNavigate()
+
   const [isOpenModalEditProduct, setIsOpenModalEditProduct] = useState(false)
   const [isOpenModalCopyProduct, setIsOpenModalCopyProduct] = useState(false)
   const [isOpenModalDeleteProduct, setIsOpenModalDeleteProduct] =
     useState(false)
 
-  const handleDoubleClickRow = e => {
-    if (e.target.classList.contains(css.rowItem)) {
-      console.log("DoubleClick on <TR>>")
-    } else {
-      console.log("NO CLICK <TR>")
+  const handleDoubleClickRow = (e, product) => {
+    if (!e.target.classList.contains(css.rowItem)) {
+      navigate("/product-info", { state: { product } })
     }
   }
 
@@ -76,7 +78,7 @@ const Table = ({ products }) => {
           isOpenModal={isOpenModalDeleteProduct}
           titleModal="Confirm deletion of the product"
           textModal="
-The product will be deleted forever and cannot be restored.:"
+Are u sure you want to delete this product?"
           titleSubmitBtn="Confirm"
         />
       )}

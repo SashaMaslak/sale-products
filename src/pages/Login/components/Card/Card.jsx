@@ -8,6 +8,7 @@ import { Loader } from "components/Loader/Loader"
 import { fetchApiUser, setToken } from "services/api/usersApi"
 import css from "./Card.module.css"
 import "react-toastify/dist/ReactToastify.css"
+import { AUTH_TOKEN } from "constants/localStorage"
 
 const Card = () => {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true)
@@ -78,7 +79,7 @@ const Card = () => {
       const result = await fetchApiUser(action, user)
       if (action === "login") {
         setToken()
-        localStorage.setItem("authToken", result.data.token)
+        localStorage.setItem(AUTH_TOKEN, result.data.token)
       }
       setMessageDB(prev => ({ ...prev, info: result.data.message }))
       toast.success(result.data.message)
@@ -90,7 +91,7 @@ const Card = () => {
     setIsLoading(false)
   }
 
-  if (localStorage.getItem("authToken")) {
+  if (localStorage.getItem(AUTH_TOKEN)) {
     return <Navigate to="/products" replace={true} />
   }
 

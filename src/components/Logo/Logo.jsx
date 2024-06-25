@@ -1,11 +1,12 @@
 import React from "react"
 import logo from "assets/images/logo.png"
 import css from "./Logo.module.css"
+import { NavLink } from "react-router-dom"
 
 const Logo = () => (
-  <a href="https://google.com" className={css.logoBlock}>
+  <NavLink to="/">
     <img src={logo} alt="logo" className={css.logo} />
-  </a>
+  </NavLink>
 )
 
 export default Logo
