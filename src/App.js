@@ -1,12 +1,10 @@
-import { useEffect } from "react"
-import { Navigate, Route, Routes, useSearchParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { Route, Routes } from "react-router-dom"
 import ProductsTable from "pages/ProductsTable/ProductsTable"
-import { Loader } from "components/Loader/Loader"
-import "./App.css"
-
 import ProductsPreview from "pages/ProductsPreview/ProductsPreview"
+import Layout from "components/Layout/Layout"
 import Login from "pages/Login/Login"
-import { Suspense, useState } from "react"
+import "./App.css"
 
 function App() {
   const [token, setToken] = useState(null)
@@ -19,6 +17,10 @@ function App() {
   return (
     <Routes>
       <Route index element={<Login />} />
+      <Route path="/" element={<Layout />}>
+        <Route path="/products" element={<ProductsTable />} />
+        <Route path="/preview" element={<ProductsPreview />} />
+      </Route>
     </Routes>
   )
 }

@@ -43,8 +43,6 @@ const ProductsTable = () => {
   return (
     <Container>
       <div className={css.productsTablePage}>
-        <Header />
-        <Nav />
         <h2 className={css.title}>Products</h2>
         <main className={css.tableBlock}>
           <Table products={products} />

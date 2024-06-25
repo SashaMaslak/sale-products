@@ -42,8 +42,6 @@ const ProductsPreview = () => {
 
   return (
     <Container>
-      <Header />
-      <Nav />
       <main className={css.cardsBlock}>
         {Array.isArray(products) &&
           products.map(p => <ProductCard key={p.id} product={p} />)}

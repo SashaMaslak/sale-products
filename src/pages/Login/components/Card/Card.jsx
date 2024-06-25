@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Navigate } from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify"
 import Input from "components/Input/Input"
 import Button from "components/Button/Button"
@@ -87,6 +88,10 @@ const Card = () => {
       setMessageDB(prev => ({ ...prev, error: error.response.data.message }))
     }
     setIsLoading(false)
+  }
+
+  if (localStorage.getItem("authToken")) {
+    return <Navigate to="/products" replace={true} />
   }
 
   return (

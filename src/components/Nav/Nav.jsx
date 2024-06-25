@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Button from "components/Button/Button"
 import css from "./Nav.module.css"
 import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
+import { Navigate } from "react-router-dom"
 
 export const Nav = () => {
   const [isOpenModalAddProduct, setIsOpenModalAddProduct] = useState(false)
@@ -10,11 +11,11 @@ export const Nav = () => {
     e.stopPropagation()
     switch (btnName) {
       case "preview":
-        console.log("pressPreview")
-        break
+        console.log("press preview")
+        return <Navigate to="preview" replace={true} />
       case "table":
-        console.log("table")
-        break
+        console.log("press table")
+        return <Navigate to="products" replace={true} />
       case "addProduct":
         setIsOpenModalAddProduct(true)
         break
@@ -27,7 +28,7 @@ export const Nav = () => {
     <nav className={css.nav}>
       <div className={css.leftBtns}>
         <Button
-          onClick={e => handleClickBtnNav(e, "preview")}
+          onClick={() => <Navigate to="preview" replace={true} />}
           buttonType="button"
           buttonTitle="Preview"
           styleAdd="border"
