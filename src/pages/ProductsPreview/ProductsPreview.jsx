@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react"
 import Container from "components/Container/Container"
-import Header from "components/Header/Header"
 import ProductCard from "./ProductCard/ProductCard"
-import Footer from "components/Footer/Footer"
 import { Pagination } from "components/Pagination/Pagination"
 import { Loader } from "components/Loader/Loader"
 import { fetchApiProducts } from "services/api/productsApi"
 import css from "./ProductsPreview.module.css"
-import { Nav } from "components/Nav/Nav"
 
 const ProductsPreview = () => {
   const [products, setProducts] = useState([])
