@@ -3,6 +3,10 @@
   margin-bottom: 24px;
 }
 
+.inModal {
+  margin-bottom: 8px;
+}
+
 .input {
   position: relative;
   width: 100%;

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify"
 import Input from "components/Input/Input"
 import Button from "components/Button/Button"
@@ -7,8 +8,10 @@ import { Loader } from "components/Loader/Loader"
 import { fetchApiUser, setToken } from "services/api/usersApi"
 import css from "./Card.module.css"
 import "react-toastify/dist/ReactToastify.css"
+import { AUTH_TOKEN } from "constants/localStorage"
 
 const Card = () => {
+  const navigate = useNavigate()
   const [isPasswordHidden, setIsPasswordHidden] = useState(true)
   const [user, setUser] = useState({ name: "", password: "" })
   const [isLoading, setIsLoading] = useState(false)
@@ -77,7 +80,7 @@ const Card = () => {
       const result = await fetchApiUser(action, user)
       if (action === "login") {
         setToken()
-        localStorage.setItem("authToken", result.data.token)
+        localStorage.setItem(AUTH_TOKEN, result.data.token)
       }
       setMessageDB(prev => ({ ...prev, info: result.data.message }))
       toast.success(result.data.message)
@@ -87,6 +90,10 @@ const Card = () => {
       setMessageDB(prev => ({ ...prev, error: error.response.data.message }))
     }
     setIsLoading(false)
+  }
+
+  if (localStorage.getItem(AUTH_TOKEN)) {
+    return navigate("/products")
   }
 
   return (

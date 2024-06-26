@@ -1,5 +1,6 @@
 import React from "react"
 import { MdAddToPhotos } from "react-icons/md"
+import { RiTableView } from "react-icons/ri"
 import { MdApps } from "react-icons/md"
 import CartIcon from "components/Icons/CartIcon/CartIcon"
 import css from "./Button.module.css"
@@ -14,11 +15,15 @@ const Button = ({
   width,
   iconName,
   iconSize,
+  isActive,
 }) => {
   let iconBtn = null
   switch (iconName) {
     case "preview":
       iconBtn = <MdApps className={`icon`} size={iconSize} />
+      break
+    case "table":
+      iconBtn = <RiTableView className={`icon`} size={iconSize} />
       break
     case "addProduct":
       iconBtn = <MdAddToPhotos className={`icon`} size={iconSize} />
@@ -38,7 +43,9 @@ const Button = ({
         type={buttonType}
         className={`${css.button} ${
           styleAdd === "border" && css.buttonBorder
-        } `}
+        } ${styleAdd === "light" && css.buttonLight} ${
+          isActive && css.buttonActive
+        }`}
         style={{ width: width }}
       >
         {iconName && iconBtn}

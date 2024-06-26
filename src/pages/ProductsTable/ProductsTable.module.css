@@ -1,19 +1,14 @@
 .productsTablePage {
   min-height: 94vh;
   height: 100%;
-  padding-top: 1rem;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
+  padding-top: 16px;
 }
 
 .title {
   color: var(--text-color);
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 32px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .tableBlock {

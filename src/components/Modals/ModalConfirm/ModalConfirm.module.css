@@ -1,0 +1,76 @@
+.modalWrapper {
+  position: fixed;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+.modal {
+  position: fixed;
+  min-width: 380px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 32px 20px;
+  z-index: 1050;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modalTitle {
+  margin-bottom: 14px;
+}
+
+.modalText {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    min-width: 480px;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.labelForm {
+  margin-bottom: 4px;
+}
+
+.inputForm {
+  font-size: 4px;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.iconCloseForm {
+  color: var(--text-color);
+}
+
+.iconCloseForm:hover {
+  color: var(--accent-orange-color);
+}

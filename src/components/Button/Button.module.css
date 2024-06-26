@@ -4,7 +4,7 @@
   justify-content: center;
   text-align: center;
   gap: 8px;
-  padding: 4px 1px;
+  padding: 4px 2px;
   border: none;
   border-radius: 5px;
   color: var(--text-color);
@@ -28,15 +28,27 @@
 }
 
 .button {
-  background-color: var(--accent-gold-color);
+  background-color: var(--accent-light-color);
 }
 
 .button:hover {
   background-color: var(--accent-gold-hover);
 }
 
+.buttonActive {
+  background-color: var(--accent-gold-color);
+}
+
 .buttonBorder {
   border: 1px solid var(--gray-50);
+}
+
+.buttonLight {
+  background-color: var(--gray-40);
+}
+
+.buttonLight:hover {
+  background-color: var(--gray-50);
 }
 
 .textBtn {

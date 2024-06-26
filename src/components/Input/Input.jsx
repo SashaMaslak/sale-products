@@ -13,8 +13,9 @@ const Input = ({
   isEmpty,
   onChange,
   onBlur,
+  inModal,
 }) => (
-  <div className={css.formGroup}>
+  <div className={`${css.formGroup} ${inModal && css.inModal}`}>
     <input
       value={value}
       onChange={onChange}

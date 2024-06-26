@@ -1,12 +1,15 @@
 import React from "react"
-import imgLaptop from "assets/images/laptop.jpeg"
 import Button from "components/Button/Button"
 import css from "./ProductCard.module.css"
+import { useNavigate } from "react-router-dom"
 
 const ProductCard = ({ product }) => {
+  const navigate = useNavigate()
+
   const handleCardClick = e => {
     if (!e.target.closest(".productBuyBtn")) {
-      console.log("Click on card")
+      const id = product._id
+      navigate(`/preview/${product._id}`)
     }
   }
 
@@ -18,7 +21,7 @@ const ProductCard = ({ product }) => {
   return (
     <div onClick={e => handleCardClick(e)} className={css.productCard}>
       <div className={css.productImg}>
-        <img src={imgLaptop} alt="Product 2" />
+        <img src={product?.image} alt="Product" />
       </div>
 
       <div className={css.productInfo}>
@@ -37,6 +40,7 @@ const ProductCard = ({ product }) => {
           buttonType="button"
           buttonTitle="Buy product"
           iconName="buyProduct"
+          iconSize="24px"
         />
       </div>
     </div>

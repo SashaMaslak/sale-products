@@ -6,8 +6,8 @@ export const Loader = () => (
   <div className={css.spinnerOverlay}>
     <Hourglass
       visible={true}
-      height="80"
-      width="80"
+      height="48"
+      width="48"
       ariaLabel="hourglass-loading"
       wrapperStyle={{}}
       wrapperClass=""
