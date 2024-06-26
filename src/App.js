@@ -5,9 +5,9 @@ import Layout from "components/Layout/Layout"
 import Login from "pages/Login/Login"
 import { RestrictedRoute } from "services/routes/RestrictedRoute"
 import { PrivateRoute } from "services/routes/PrivateRoute"
-import "./App.css"
 import { Error } from "pages/Error/Error"
 import { ProductInfo } from "pages/ProductInfo/ProductInfo"
+import "./App.css"
 
 function App() {
   return (

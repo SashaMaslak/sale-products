@@ -15,7 +15,7 @@
 
 .textarea::placeholder {
   font-family: "Manrope";
-  color: red;
+  color: var(--text-color);
 }
 
 .textarea:focus {
