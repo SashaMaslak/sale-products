@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import Container from "components/Container/Container"
 import ProductCard from "./ProductCard/ProductCard"
 import { Pagination } from "components/Pagination/Pagination"
@@ -13,7 +13,8 @@ const ProductsPreview = () => {
   const [limit, setLimit] = useState(12)
   const [totalResult, setTotalResult] = useState(0)
 
-  const fetchProducts = async () => {
+  console.log(setLimit)
+  const fetchProducts = useCallback(async () => {
     setIsLoading(true)
     try {
       const response = await fetchApiProducts(
@@ -27,11 +28,11 @@ const ProductsPreview = () => {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [limit, currentPage])
 
   useEffect(() => {
-    fetchProducts(limit, currentPage, setProducts, setTotalResult)
-  }, [limit, currentPage])
+    fetchProducts()
+  }, [fetchProducts])
 
   const handlePageClick = selectedPage => {
     setCurrentPage(selectedPage)
