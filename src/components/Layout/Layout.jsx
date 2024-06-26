@@ -7,7 +7,7 @@ import Footer from "components/Footer/Footer"
 
 const Layout = () => {
   const location = useLocation()
-  const showNav = !location.pathname.startsWith("/product-info")
+  const showNav = !location.pathname.startsWith("/preview/")
 
   return (
     <div className={css.layout}>

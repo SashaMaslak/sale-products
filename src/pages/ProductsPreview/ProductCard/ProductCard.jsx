@@ -8,7 +8,8 @@ const ProductCard = ({ product }) => {
 
   const handleCardClick = e => {
     if (!e.target.closest(".productBuyBtn")) {
-      navigate("/product-info", { state: { product } })
+      const id = product._id
+      navigate(`/preview/${product._id}`)
     }
   }
 

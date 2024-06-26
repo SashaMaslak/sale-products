@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Navigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify"
 import Input from "components/Input/Input"
 import Button from "components/Button/Button"
@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css"
 import { AUTH_TOKEN } from "constants/localStorage"
 
 const Card = () => {
+  const navigate = useNavigate()
   const [isPasswordHidden, setIsPasswordHidden] = useState(true)
   const [user, setUser] = useState({ name: "", password: "" })
   const [isLoading, setIsLoading] = useState(false)
@@ -92,7 +93,7 @@ const Card = () => {
   }
 
   if (localStorage.getItem(AUTH_TOKEN)) {
-    return <Navigate to="/products" replace={true} />
+    return navigate("/products")
   }
 
   return (

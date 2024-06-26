@@ -32,7 +32,7 @@ function App() {
           }
         />
         <Route
-          path="/product-info"
+          path="/preview/:productId"
           element={<PrivateRoute redirectTo="/" component={<ProductInfo />} />}
         />
       </Route>

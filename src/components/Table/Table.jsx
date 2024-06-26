@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
-
-import css from "./Table.module.css"
 import TableRow from "./TableRow"
 import TableHead from "./TableHead"
 import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
 import { ModalConfirm } from "components/Modals/ModalConfirm/ModalConfirm"
+import css from "./Table.module.css"
 
 const Table = ({ products }) => {
   const navigate = useNavigate()
@@ -16,8 +15,9 @@ const Table = ({ products }) => {
     useState(false)
 
   const handleDoubleClickRow = (e, product) => {
-    if (!e.target.classList.contains(css.rowItem)) {
-      navigate("/product-info", { state: { product } })
+    if (!e.target.closest(".productBuyBtn")) {
+      const id = product._id
+      navigate(`/preview/${product._id}`)
     }
   }
 
