@@ -1,4 +1,96 @@
+main {
+  min-height: 83vh;
+  height: 100%;
+}
+
+.btnIcon {
+  display: flex;
+  align-items: center;
+}
+
 .backIcon {
   font-size: 32px;
+  color: var(--text-color);
+}
+
+.headInfo {
+  display: flex;
+  align-items: center;
+}
+
+.titleInfo {
+  margin-left: 64px;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.mainInfo {
+  display: flex;
+}
+
+.productImg {
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  padding: 24px 32px 12px 32px;
+}
+
+.sellInfo {
+  padding: 24px 32px 12px 32px;
+}
+
+.sellInfoAvail {
+  display: flex;
+  align-items: center;
+}
+
+.accessInfo {
+  font-weight: bold;
+  font-size: 32px;
+  color: green;
+  margin-left: 18px;
+}
+
+.notAccessInfo {
+  font-weight: bold;
+  font-size: 32px;
+  color: red;
+  margin-left: 18px;
+}
+
+.priceInfo {
+  font-weight: bold;
+  font-size: 32px;
+  color: var(--accent-orange-color);
+  margin: 32px 0;
+}
+
+.countInfo {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 32px;
+}
+
+.productInfo {
+  padding: 24px 32px 12px 32px;
+}
+
+.wrapperTitleDescr {
+  font-weight: bold;
+  font-size: 32px;
+  color: var(--text-color);
+  margin-bottom: 32px;
+}
+
+.titleDescr {
+  font-weight: bold;
+  font-size: 32px;
+  color: var(--gray-50);
+}
+
+.descrInfo {
+  font-size: 18px;
+  padding-left: 18px;
   color: var(--text-color);
 }

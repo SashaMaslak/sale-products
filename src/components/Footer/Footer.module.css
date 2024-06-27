@@ -1,5 +1,15 @@
 .footer {
-  text-align: center;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   font-size: 12px;
   padding: 1rem 1rem;
+}
+
+.linkFooter {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 2px;
+  gap: 2px;
 }
