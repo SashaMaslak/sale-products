@@ -10,10 +10,9 @@ const ProductsPreview = () => {
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  const [limit, setLimit] = useState(12)
+  const [limit] = useState(12)
   const [totalResult, setTotalResult] = useState(0)
 
-  console.log(setLimit)
   const fetchProducts = useCallback(async () => {
     setIsLoading(true)
     try {
