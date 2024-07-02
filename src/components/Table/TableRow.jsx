@@ -15,20 +15,26 @@ const TableRow = ({ product, handleClickIcon, handleDoubleClickRow }) => {
       onDoubleClick={e => handleDoubleClickRow(e, product)}
       className={css.row}
     >
-      <td className={css.rowItem}>{product?.id}</td>
+      <td className={css.rowItem}>{product?._id}</td>
       <td className={css.rowItem}>{product?.category}</td>
       <td className={css.rowItem}>{product?.name}</td>
       <td className={css.rowItem}>{product?.quantity}</td>
       <td className={css.rowItem}>{formattedPrice}</td>
       <td className={css.rowItem}>
         <div className={css.iconsGroup}>
-          <button onClick={e => handleClickIcon(e)} name="edit">
+          <button onClick={e => handleClickIcon(e, product)} name="edit">
             <FaEdit className={`icon ${css.tableIcon}`} />
           </button>
-          <button onClick={e => handleClickIcon(e)} name="copy">
+          <button onClick={e => handleClickIcon(e, product)} name="copy">
             <FaCopy className={`icon ${css.tableIcon}`} />
           </button>
-          <button onClick={e => handleClickIcon(e)} name="remove">
+          <button
+            onClick={e => {
+              console.log(product)
+              handleClickIcon(e, product)
+            }}
+            name="remove"
+          >
             <RiDeleteBin6Fill className={`icon ${css.tableIcon}`} />
           </button>
         </div>

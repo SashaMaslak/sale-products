@@ -9,6 +9,7 @@ export const ModalConfirm = ({
   titleModal,
   textModal,
   titleSubmitBtn,
+  handleConfirm,
 }) => {
   useEffect(() => {
     const handleKeyPress = event => {
@@ -34,26 +35,23 @@ export const ModalConfirm = ({
     <div className={css.modalWrapper}>
       <div
         className={css.modalBackdrop}
-        onClick={() => handleCloseModal(false)}
+        onClick={() => handleCloseModal()}
       ></div>
       <div className={css.modal}>
-        <span
-          className={css.closeButton}
-          onClick={() => handleCloseModal(false)}
-        >
+        <span className={css.closeButton} onClick={() => handleCloseModal()}>
           <AiOutlineCloseCircle className={css.iconCloseForm} size={32} />
         </span>
         <h3 className={css.modalTitle}>{titleModal}</h3>
         <p className={css.modalText}>{textModal}</p>
         <div className={css.btnGroup}>
           <Button
-            onClick={() => handleCloseModal(false)}
+            onClick={() => handleCloseModal()}
             buttonType="button"
             buttonTitle="Cancel"
             styleAdd="light"
           />
           <Button
-            onClick={() => handleCloseModal(false)}
+            onClick={handleConfirm}
             buttonType="button"
             buttonTitle={titleSubmitBtn}
           />
