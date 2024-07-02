@@ -6,7 +6,11 @@ import { Loader } from "components/Loader/Loader"
 import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
 import { ModalConfirm } from "components/Modals/ModalConfirm/ModalConfirm"
 import Table from "../../components/Table/Table"
-import { fetchApiProducts } from "services/api/productsApi"
+import {
+  fetchApiProducts,
+  fetchEditProduct,
+  fetchOneProduct,
+} from "services/api/productsApi"
 import { deleteProduct } from "services/api/productsApi"
 import css from "./ProductsTable.module.css"
 
@@ -22,6 +26,7 @@ const ProductsTable = () => {
   const [isOpenModalDeleteProduct, setIsOpenModalDeleteProduct] =
     useState(false)
   const [productToDelete, setProductToDelete] = useState(null)
+  const [productToEdit, setProductToEdit] = useState(null)
 
   const fetchProducts = useCallback(async () => {
     setIsLoading(true)
@@ -47,17 +52,18 @@ const ProductsTable = () => {
     setCurrentPage(selectedPage)
   }
 
-  const handleClickIcon = (e, productId) => {
+  const handleClickIcon = (e, product) => {
     e.stopPropagation()
     switch (e.currentTarget.name) {
       case "edit":
+        setProductToEdit(product)
         setIsOpenModalEditProduct(true)
         break
       case "copy":
         setIsOpenModalCopyProduct(true)
         break
       case "remove":
-        setProductToDelete(productId)
+        setProductToDelete(product)
         setIsOpenModalDeleteProduct(true)
         break
       default:
@@ -76,15 +82,30 @@ const ProductsTable = () => {
       deleteProduct(productToDelete._id)
         .then(() => {
           console.log("Product deleted successfully")
-          setProducts(
-            products.filter(product => product._id !== productToDelete._id)
-          )
+          fetchProducts()
         })
         .catch(error => {
           console.error("Error deleting product:", error)
         })
         .finally(() => {
           setIsOpenModalDeleteProduct(false)
+        })
+    }
+  }
+
+  const handleEditProduct = ({ _id, id, ...restedProduct }) => {
+    console.log(`restedProduct:`, restedProduct)
+    if (productToEdit) {
+      fetchEditProduct(_id, restedProduct)
+        .then(() => {
+          console.log("Product changed successfully")
+          fetchProducts()
+        })
+        .catch(error => {
+          console.error("Error deleting product:", error)
+        })
+        .finally(() => {
+          setIsOpenModalEditProduct(false)
         })
     }
   }
@@ -98,7 +119,6 @@ const ProductsTable = () => {
             products={products}
             handleClickIcon={handleClickIcon}
             handleDoubleClickRow={handleDoubleClickRow}
-            handleDeleteProduct={handleDeleteProduct}
           />
         </main>
         <Pagination
@@ -115,6 +135,8 @@ const ProductsTable = () => {
           isOpenModal={isOpenModalEditProduct}
           titleModal="Edit Product:"
           titleSubmitBtn="Changes"
+          handleEditProduct={handleEditProduct}
+          productToEdit={productToEdit}
         />
       )}
 

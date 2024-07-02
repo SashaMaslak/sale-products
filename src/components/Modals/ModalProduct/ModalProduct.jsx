@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 import Button from "components/Button/Button"
 import css from "./ModalProduct.module.css"
@@ -10,7 +10,13 @@ export const ModalProduct = ({
   isOpenModal,
   titleModal,
   titleSubmitBtn,
+  handleEditProduct,
+  productToEdit,
 }) => {
+  const [product, setProduct] = useState(productToEdit)
+
+  console.log("product:", product)
+
   useEffect(() => {
     const handleKeyPress = event => {
       if (event.key === "Escape") {
@@ -31,6 +37,16 @@ export const ModalProduct = ({
     return null
   }
 
+  const handleChange = (e, inputName) => {
+    const value = e.target.value
+    setProduct({ ...product, [inputName]: value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    handleEditProduct(product)
+  }
+
   return (
     <div className={css.modalWrapper}>
       <div
@@ -48,6 +64,8 @@ export const ModalProduct = ({
         <form className={css.form}>
           <label className={css.labelForm}>Category:</label>
           <Input
+            value={product?.category}
+            onChange={e => handleChange(e, "category")}
             className={css.inputForm}
             inputName="categoryProduct"
             inputType="text"
@@ -56,6 +74,8 @@ export const ModalProduct = ({
           />
           <label className={css.labelForm}>Name:</label>
           <Input
+            value={product?.name}
+            onChange={e => handleChange(e, "name")}
             inputName="nameProduct"
             inputType="text"
             inputPlaceholder="Name"
@@ -63,6 +83,8 @@ export const ModalProduct = ({
           />
           <label className={css.labelForm}>Quantity:</label>
           <Input
+            value={product?.quantity}
+            onChange={e => handleChange(e, "quantity")}
             inputName="quantityProduct"
             inputType="number"
             inputPlaceholder="Quantity"
@@ -70,6 +92,8 @@ export const ModalProduct = ({
           />
           <label className={css.labelForm}>Price:</label>
           <Input
+            value={product?.price}
+            onChange={e => handleChange(e, "price")}
             inputName="priceProduct"
             inputType="number"
             inputPlaceholder="Price"
@@ -77,6 +101,8 @@ export const ModalProduct = ({
           />
           <label className={css.labelForm}>Description:</label>
           <TextArea
+            value={product?.description}
+            onChange={e => handleChange(e, "description")}
             textareaPlaceholder="Description"
             title="Description:"
             height="100px"
@@ -84,12 +110,12 @@ export const ModalProduct = ({
           <div className={css.btnGroup}>
             <Button
               onClick={() => handleCloseModal(false)}
-              buttonType="submit"
+              buttonType="button"
               buttonTitle="Cancel"
               styleAdd="light"
             />
             <Button
-              onClick={() => handleCloseModal(false)}
+              onClick={e => handleSubmit(e)}
               buttonType="submit"
               buttonTitle={titleSubmitBtn}
             />

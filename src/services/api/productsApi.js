@@ -4,7 +4,14 @@ export const fetchApiProducts = async endpoint => {
   return await productsApi.get(`${endpoint}`)
 }
 
+export const fetchOneProduct = async id => {
+  return await productsApi.get(`${id}`)
+}
+
+export const fetchEditProduct = async (id, editedProduct) => {
+  return await productsApi.put(`${id}`, editedProduct)
+}
+
 export const deleteProduct = async id => {
-  console.log("id:", id)
   return await productsApi.delete(`${id}`)
 }
