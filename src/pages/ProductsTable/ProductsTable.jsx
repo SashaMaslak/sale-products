@@ -1,21 +1,23 @@
-import React, { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { Pagination } from "components/Pagination/Pagination"
 import Container from "components/Container/Container"
 import { Loader } from "components/Loader/Loader"
+import IsLoadedContext from "context/context"
 import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
 import { ModalConfirm } from "components/Modals/ModalConfirm/ModalConfirm"
 import Table from "../../components/Table/Table"
 import {
+  fetchAddProduct,
   fetchApiProducts,
   fetchEditProduct,
-  fetchOneProduct,
 } from "services/api/productsApi"
 import { deleteProduct } from "services/api/productsApi"
 import css from "./ProductsTable.module.css"
 
 const ProductsTable = () => {
   const navigate = useNavigate()
+  const { isLoaded, setIsLoaded } = useContext(IsLoadedContext)
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
@@ -45,8 +47,12 @@ const ProductsTable = () => {
   }, [limit, currentPage])
 
   useEffect(() => {
-    fetchProducts()
-  }, [fetchProducts])
+    if (!isLoaded) {
+      fetchProducts()
+      setIsLoaded(true)
+      return
+    }
+  }, [isLoaded])
 
   const handlePageClick = selectedPage => {
     setCurrentPage(selectedPage)
@@ -60,6 +66,7 @@ const ProductsTable = () => {
         setIsOpenModalEditProduct(true)
         break
       case "copy":
+        setProductToEdit(product)
         setIsOpenModalCopyProduct(true)
         break
       case "remove":
@@ -71,42 +78,45 @@ const ProductsTable = () => {
     }
   }
 
-  const handleDoubleClickRow = (e, product) => {
-    if (!e.target.closest(".productBuyBtn")) {
-      navigate(`/preview/${product._id}`)
+  const handleDoubleClickRow = product => {
+    navigate(`/preview/${product._id}`)
+  }
+
+  const handleDeleteProduct = async () => {
+    try {
+      if (productToDelete) {
+        await deleteProduct(productToDelete._id)
+        console.log("Product deleted successfully")
+        await fetchProducts()
+      }
+    } catch (error) {
+      console.error("Error deleting product:", error)
+    } finally {
+      setIsOpenModalDeleteProduct(false)
     }
   }
 
-  const handleDeleteProduct = () => {
-    if (productToDelete) {
-      deleteProduct(productToDelete._id)
-        .then(() => {
-          console.log("Product deleted successfully")
-          fetchProducts()
-        })
-        .catch(error => {
-          console.error("Error deleting product:", error)
-        })
-        .finally(() => {
-          setIsOpenModalDeleteProduct(false)
-        })
-    }
-  }
-
-  const handleEditProduct = ({ _id, id, ...restedProduct }) => {
-    console.log(`restedProduct:`, restedProduct)
-    if (productToEdit) {
-      fetchEditProduct(_id, restedProduct)
-        .then(() => {
+  const handleEditProduct = async (
+    { _id, id, updatedAt, ...restedProduct },
+    action
+  ) => {
+    try {
+      if (productToEdit) {
+        if (action === "edit") {
+          await fetchEditProduct(_id, restedProduct)
           console.log("Product changed successfully")
-          fetchProducts()
-        })
-        .catch(error => {
-          console.error("Error deleting product:", error)
-        })
-        .finally(() => {
-          setIsOpenModalEditProduct(false)
-        })
+        }
+        if (action === "create") {
+          await fetchAddProduct(restedProduct)
+          console.log("Product copied successfully")
+        }
+        await fetchProducts()
+      }
+    } catch (error) {
+      console.error("Error editing or copied product:", error)
+    } finally {
+      setIsOpenModalEditProduct(false)
+      setIsOpenModalCopyProduct(false)
     }
   }
 
@@ -134,7 +144,7 @@ const ProductsTable = () => {
           handleCloseModal={() => setIsOpenModalEditProduct(false)}
           isOpenModal={isOpenModalEditProduct}
           titleModal="Edit Product:"
-          titleSubmitBtn="Changes"
+          titleSubmitBtn="Change"
           handleEditProduct={handleEditProduct}
           productToEdit={productToEdit}
         />
@@ -146,6 +156,8 @@ const ProductsTable = () => {
           isOpenModal={isOpenModalCopyProduct}
           titleModal="Copy Product:"
           titleSubmitBtn="Create NEW"
+          handleEditProduct={handleEditProduct}
+          productToEdit={productToEdit}
         />
       )}
 

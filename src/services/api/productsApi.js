@@ -8,6 +8,10 @@ export const fetchOneProduct = async id => {
   return await productsApi.get(`${id}`)
 }
 
+export const fetchAddProduct = async newProduct => {
+  return await productsApi.post("", newProduct)
+}
+
 export const fetchEditProduct = async (id, editedProduct) => {
   return await productsApi.put(`${id}`, editedProduct)
 }

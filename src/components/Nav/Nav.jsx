@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import Button from "components/Button/Button"
 import css from "./Nav.module.css"
 import { ModalProduct } from "components/Modals/ModalProduct/ModalProduct"
+import { fetchAddProduct } from "services/api/productsApi"
 
 const Nav = () => {
   const [isOpenModalAddProduct, setIsOpenModalAddProduct] = useState(false)
@@ -23,6 +24,17 @@ const Nav = () => {
         break
       default:
         break
+    }
+  }
+
+  const handleAddProduct = async product => {
+    try {
+      await fetchAddProduct(product)
+      console.log("Product added successfully")
+    } catch (error) {
+      console.error("Error addition product:", error)
+    } finally {
+      setIsOpenModalAddProduct(false)
     }
   }
 
@@ -62,6 +74,7 @@ const Nav = () => {
       {isOpenModalAddProduct && (
         <ModalProduct
           handleCloseModal={() => setIsOpenModalAddProduct(false)}
+          handleEditProduct={handleAddProduct}
           isOpenModal={isOpenModalAddProduct}
           titleModal="Add Product:"
           titleSubmitBtn="Create"

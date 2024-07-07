@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
+import IsLoadedContext from "context/context"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 import Button from "components/Button/Button"
 import css from "./ModalProduct.module.css"
@@ -13,9 +14,17 @@ export const ModalProduct = ({
   handleEditProduct,
   productToEdit,
 }) => {
-  const [product, setProduct] = useState(productToEdit)
+  const [product, setProduct] = useState(
+    productToEdit || {
+      category: "",
+      name: "",
+      quantity: "",
+      price: "",
+      description: "",
+    }
+  )
 
-  console.log("product:", product)
+  const { setIsLoaded } = useContext(IsLoadedContext)
 
   useEffect(() => {
     const handleKeyPress = event => {
@@ -42,9 +51,15 @@ export const ModalProduct = ({
     setProduct({ ...product, [inputName]: value })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    handleEditProduct(product)
+    let action
+    console.log("producthandleSubmit:", product)
+    if (e.target.textContent === "Change") action = "edit"
+    if (e.target.textContent === "Create NEW") action = "create"
+    await handleEditProduct(product, action)
+
+    setIsLoaded(false)
   }
 
   return (
@@ -60,7 +75,7 @@ export const ModalProduct = ({
         >
           <AiOutlineCloseCircle className={css.iconCloseForm} size={32} />
         </span>
-        <h3>{titleModal}</h3>
+        <h3 className={css.titleModal}>{titleModal}</h3>
         <form className={css.form}>
           <label className={css.labelForm}>Category:</label>
           <Input
