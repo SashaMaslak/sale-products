@@ -11,10 +11,7 @@ const TableRow = ({ product, handleClickIcon, handleDoubleClickRow }) => {
   })
 
   return (
-    <tr
-      onDoubleClick={e => handleDoubleClickRow(e, product)}
-      className={css.row}
-    >
+    <tr onDoubleClick={() => handleDoubleClickRow(product)} className={css.row}>
       <td className={css.rowItem}>{product?._id}</td>
       <td className={css.rowItem}>{product?.category}</td>
       <td className={css.rowItem}>{product?.name}</td>
@@ -30,7 +27,6 @@ const TableRow = ({ product, handleClickIcon, handleDoubleClickRow }) => {
           </button>
           <button
             onClick={e => {
-              console.log(product)
               handleClickIcon(e, product)
             }}
             name="remove"

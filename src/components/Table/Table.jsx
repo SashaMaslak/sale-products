@@ -12,7 +12,7 @@ const Table = ({ products, handleClickIcon, handleDoubleClickRow }) => {
           {Array.isArray(products) &&
             products.map(p => (
               <TableRow
-                key={p.id}
+                key={p._id}
                 product={p}
                 handleClickIcon={handleClickIcon}
                 handleDoubleClickRow={handleDoubleClickRow}

@@ -7,6 +7,7 @@ import { RestrictedRoute } from "services/routes/RestrictedRoute"
 import { PrivateRoute } from "services/routes/PrivateRoute"
 import { Error } from "pages/Error/Error"
 import { ProductInfo } from "pages/ProductInfo/ProductInfo"
+
 import "./App.css"
 
 function App() {
