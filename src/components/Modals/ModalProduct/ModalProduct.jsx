@@ -6,24 +6,24 @@ import css from "./ModalProduct.module.css"
 import Input from "components/Input/Input"
 import { TextArea } from "components/TextArea/TextArea"
 
+const emptyForm = {
+  category: "",
+  name: "",
+  quantity: "",
+  price: "",
+  description: "",
+}
+
 export const ModalProduct = ({
   handleCloseModal,
   isOpenModal,
   titleModal,
   titleSubmitBtn,
   handleEditProduct,
+  handleCopyProduct,
   productToEdit,
 }) => {
-  const [product, setProduct] = useState(
-    productToEdit || {
-      category: "",
-      name: "",
-      quantity: "",
-      price: "",
-      description: "",
-    }
-  )
-
+  const [product, setProduct] = useState(productToEdit || emptyForm)
   const { setIsLoaded } = useContext(IsLoadedContext)
 
   useEffect(() => {
@@ -53,12 +53,8 @@ export const ModalProduct = ({
 
   const handleSubmit = async e => {
     e.preventDefault()
-    let action
-    console.log("producthandleSubmit:", product)
-    if (e.target.textContent === "Change") action = "edit"
-    if (e.target.textContent === "Create NEW") action = "create"
-    await handleEditProduct(product, action)
-
+    if (e.target.textContent === "Change") await handleEditProduct(product)
+    if (e.target.textContent === "Create NEW") await handleCopyProduct(product)
     setIsLoaded(false)
   }
 

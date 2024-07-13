@@ -84,11 +84,8 @@ const ProductsTable = () => {
 
   const handleDeleteProduct = async () => {
     try {
-      if (productToDelete) {
-        await deleteProduct(productToDelete._id)
-        console.log("Product deleted successfully")
-        await fetchProducts()
-      }
+      await deleteProduct(productToDelete._id)
+      await fetchProducts()
     } catch (error) {
       console.error("Error deleting product:", error)
     } finally {
@@ -96,26 +93,38 @@ const ProductsTable = () => {
     }
   }
 
-  const handleEditProduct = async (
-    { _id, id, updatedAt, ...restedProduct },
-    action
-  ) => {
+  const handleEditProduct = async ({
+    _id,
+    id,
+    updatedAt,
+    ...restedProduct
+  }) => {
     try {
       if (productToEdit) {
-        if (action === "edit") {
-          await fetchEditProduct(_id, restedProduct)
-          console.log("Product changed successfully")
-        }
-        if (action === "create") {
-          await fetchAddProduct(restedProduct)
-          console.log("Product copied successfully")
-        }
+        await fetchEditProduct(_id, restedProduct)
         await fetchProducts()
       }
     } catch (error) {
       console.error("Error editing or copied product:", error)
     } finally {
       setIsOpenModalEditProduct(false)
+    }
+  }
+
+  const handleCopyProduct = async ({
+    _id,
+    id,
+    updatedAt,
+    ...restedProduct
+  }) => {
+    try {
+      if (productToEdit) {
+        await fetchAddProduct(restedProduct)
+        await fetchProducts()
+      }
+    } catch (error) {
+      console.error("Error editing or copied product:", error)
+    } finally {
       setIsOpenModalCopyProduct(false)
     }
   }
@@ -156,7 +165,7 @@ const ProductsTable = () => {
           isOpenModal={isOpenModalCopyProduct}
           titleModal="Copy Product:"
           titleSubmitBtn="Create NEW"
-          handleEditProduct={handleEditProduct}
+          handleCopyProduct={handleCopyProduct}
           productToEdit={productToEdit}
         />
       )}
