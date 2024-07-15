@@ -23,3 +23,9 @@
   box-shadow: var(--shadow);
   outline: none;
 }
+
+.textareaEmpty {
+  border: 1px solid #ec6f5d;
+  background-color: #fff0ee;
+  color: #ec6f5d;
+}
