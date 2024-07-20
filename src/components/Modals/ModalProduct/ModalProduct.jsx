@@ -76,7 +76,7 @@ export const ModalProduct = ({
   }
 
   const handleBlur = inputName => {
-    if (product[inputName].trim() === "") {
+    if (!product[inputName].trim()) {
       setErrorsInputs(prevErrors => ({
         ...prevErrors,
         [inputName]: `${
