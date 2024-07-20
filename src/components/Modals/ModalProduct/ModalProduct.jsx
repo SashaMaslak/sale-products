@@ -52,7 +52,7 @@ export const ModalProduct = ({
     const newErrorsInput = emptyForm
 
     for (const key in product) {
-      if (product[key].trim() === "") {
+      if (!product[key].trim()) {
         newErrorsInput[key] = `${
           key.charAt(0).toUpperCase() + key.slice(1)
         } не може бути пустим.`
