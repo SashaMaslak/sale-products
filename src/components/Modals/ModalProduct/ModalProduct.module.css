@@ -45,7 +45,7 @@
 }
 
 .titleModal {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .form {
@@ -56,10 +56,12 @@
 
 .labelForm {
   margin-bottom: 4px;
+  margin-top: 7px;
 }
 
 .inputForm {
   font-size: 4px;
+  position: relative;
 }
 
 .btnGroup {
@@ -74,4 +76,31 @@
 
 .iconCloseForm:hover {
   color: var(--accent-orange-color);
+}
+
+.errorInput {
+  position: absolute;
+  left: 28px;
+  font-size: 12px;
+  color: red;
+}
+
+.errorInputCategory {
+  top: 126px;
+}
+
+.errorInputName {
+  top: 196px;
+}
+
+.errorInputQuantity {
+  top: 266px;
+}
+
+.errorInputPrice {
+  top: 336px;
+}
+
+.errorInputDescription {
+  top: 476px;
 }
